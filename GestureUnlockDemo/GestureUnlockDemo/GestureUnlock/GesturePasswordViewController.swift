@@ -17,7 +17,7 @@ class GesturePasswordViewController: UIViewController, GesturePasswordViewDelega
     // 是修改手势
     var isChangeGesture = false
     // 取消按钮
-    let cancelBtn = UIButton.init(type: UIButtonType.custom)
+    private let cancelBtn = UIButton.init(type: UIButtonType.custom)
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
