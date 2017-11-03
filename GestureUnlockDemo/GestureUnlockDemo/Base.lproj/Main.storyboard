@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GestureUnlockDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O71-WK-8oS">
+                                <rect key="frame" x="162.5" y="170" width="49.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1XA-OA-6EB">
+                                <rect key="frame" x="119" y="241" width="136" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手势解锁：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgq-Em-MzA">
+                                        <rect key="frame" x="0.0" y="0.0" width="87" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hHS-Jy-5ma">
+                                        <rect key="frame" x="87" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="gestureUnlockSwitchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="x5R-Zi-eJ2"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="hHS-Jy-5ma" firstAttribute="leading" secondItem="Qgq-Em-MzA" secondAttribute="trailing" id="9qc-QW-BHJ"/>
+                                    <constraint firstItem="Qgq-Em-MzA" firstAttribute="leading" secondItem="1XA-OA-6EB" secondAttribute="leading" id="Hse-7G-feV"/>
+                                    <constraint firstAttribute="trailing" secondItem="hHS-Jy-5ma" secondAttribute="trailing" id="Rm2-r4-ZTK"/>
+                                    <constraint firstAttribute="bottom" secondItem="Qgq-Em-MzA" secondAttribute="bottom" id="Sds-bV-Y9W"/>
+                                    <constraint firstItem="hHS-Jy-5ma" firstAttribute="top" secondItem="1XA-OA-6EB" secondAttribute="top" id="fce-qq-ppg"/>
+                                    <constraint firstAttribute="bottom" secondItem="hHS-Jy-5ma" secondAttribute="bottom" id="s5i-EK-wq5"/>
+                                    <constraint firstItem="Qgq-Em-MzA" firstAttribute="top" secondItem="1XA-OA-6EB" secondAttribute="top" id="wEs-Ic-l2T"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="en0-M2-OEb">
+                                <rect key="frame" x="141" y="362" width="92" height="30"/>
+                                <state key="normal" title="清除手势密码"/>
+                                <connections>
+                                    <action selector="clearGesturePasswordBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QEu-o1-05t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJL-Kz-wy5">
+                                <rect key="frame" x="141" y="302" width="92" height="30"/>
+                                <state key="normal" title="修改手势密码"/>
+                                <connections>
+                                    <action selector="changeGesturePasswordBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IQg-e6-J8q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="en0-M2-OEb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5U9-d7-Z0D"/>
+                            <constraint firstItem="1XA-OA-6EB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FpV-j5-IOD"/>
+                            <constraint firstItem="O71-WK-8oS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="OLG-aH-ANd"/>
+                            <constraint firstItem="1XA-OA-6EB" firstAttribute="top" secondItem="O71-WK-8oS" secondAttribute="bottom" constant="50" id="TmK-1h-bNU"/>
+                            <constraint firstItem="en0-M2-OEb" firstAttribute="top" secondItem="cJL-Kz-wy5" secondAttribute="bottom" constant="30" id="bIC-Oq-Pcl"/>
+                            <constraint firstItem="O71-WK-8oS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jhx-U7-KHP"/>
+                            <constraint firstItem="cJL-Kz-wy5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qPa-fG-xJt"/>
+                            <constraint firstItem="cJL-Kz-wy5" firstAttribute="top" secondItem="1XA-OA-6EB" secondAttribute="bottom" constant="30" id="r1h-m4-I98"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="gestureUnlockSwitch" destination="hHS-Jy-5ma" id="o9E-2I-iru"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-73" y="132"/>
+        </scene>
+    </scenes>
+</document>
