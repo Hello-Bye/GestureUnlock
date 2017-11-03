@@ -4,7 +4,7 @@
 不足之处，望多多指点
 
 
-![](/Users/GeekZoo/Desktop/QQ20171103-141714-HD.gif)
+![](https://github.com/Hello-Bye/GestureUnlock/blob/master/QQ20171103-141714-HD.gif)
 
 ## Use
 * 使用很简单，下载demo，将GestureUnlock文件夹拖到自己的项目中，直接调用GesturePasswordViewController即可，自动判断是需要创建还是需要验证，用户自己管理是否需要手势验证操作，详情参考demo
